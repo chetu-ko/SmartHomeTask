@@ -1,0 +1,14 @@
+[
+    {
+        "id" : 1,
+        "name": "Short Cover",
+        "image": "assets/soundimage/shortcover.JFIF",
+        "sound": "assets/sounds/Shortcover.MP3"
+    },
+    {
+        "id" : 2,
+        "name": "Short song",
+        "image": "assets/soundimage/shortsong.JFIF",
+        "sound": "assets/sounds/ShortSong.MP3"
+    }
+]
