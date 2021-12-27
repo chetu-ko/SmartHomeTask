@@ -5,6 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:smarthomestack/main.dart';
 import 'package:smarthomestack/widget/blur_effect.dart';
+import 'package:smarthomestack/widget/rotate_widget.dart';
 
 class BottomSheetView extends StatefulWidget {
   final ScrollController scrollController;
@@ -46,7 +47,21 @@ class _BottomSheetViewState extends State<BottomSheetView> {
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
+                Expanded(
+                  flex: 1,
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: AppColor.subtext.withOpacity(0.2),
+                          borderRadius: BorderRadius.circular(40)),
+                      width: 50,
+                      height: 10,
+                    ),
+                  ),
+                ),
                 Row(
                   children: [
                     Text(
@@ -89,9 +104,39 @@ class _BottomSheetViewState extends State<BottomSheetView> {
                 FrostedDemo(
                   child: Container(
                     height: 300.h,
-                    decoration: BoxDecoration(
-                      color: AppColor.subtext,
-                      borderRadius: BorderRadius.circular(40.r),
+                    child: Padding(
+                      padding: EdgeInsets.only(top: 20),
+                      child: Row(
+                        children: [
+                          Wrap(
+                            children: [
+                              Text("14",
+                                  style: TextStyle(
+                                      fontSize: 18.sp, color: AppColor.text)),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 0),
+                                child: Text("°C",
+                                    style: TextStyle(
+                                        fontSize: 18.sp, color: AppColor.text)),
+                              )
+                            ],
+                          ),
+                          TempController(),
+                          Wrap(
+                            children: [
+                              Text("28",
+                                  style: TextStyle(
+                                      fontSize: 18.sp, color: AppColor.text)),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 0),
+                                child: Text("°C",
+                                    style: TextStyle(
+                                        fontSize: 18.sp, color: AppColor.text)),
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -114,10 +159,10 @@ class _BottomSheetViewState extends State<BottomSheetView> {
                 Row(
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(left: 10.h),
+                      padding: EdgeInsets.only(left: 10.h, bottom: 20.h),
                       child: Container(
                         width: 150.w,
-                        height: 70.h,
+                        height: 75.h,
                         decoration: BoxDecoration(
                             color: AppColor.subtext.withOpacity(0.2),
                             borderRadius: BorderRadius.circular(20.r)),
@@ -152,10 +197,10 @@ class _BottomSheetViewState extends State<BottomSheetView> {
                     ),
                     const Spacer(),
                     Padding(
-                      padding: EdgeInsets.only(right: 10.h),
+                      padding: EdgeInsets.only(right: 10.h, bottom: 20.h),
                       child: Container(
                         width: 150.w,
-                        height: 70.h,
+                        height: 75.h,
                         decoration: BoxDecoration(
                             color: AppColor.subtext.withOpacity(0.2),
                             borderRadius: BorderRadius.circular(20.r)),

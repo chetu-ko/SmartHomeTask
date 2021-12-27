@@ -203,7 +203,7 @@ class _MyHomePageState extends State<MyHomePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 20, left: 20),
+              padding: EdgeInsets.only(top: 20.h, left: 20.w),
               child: Text(
                 "Home",
                 style: TextStyle(
@@ -213,7 +213,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 0, left: 20),
+              padding: EdgeInsets.only(left: 20.w),
               child: Text(
                 "Tempreture",
                 style: TextStyle(
@@ -286,7 +286,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void _showSheetWithoutList(BuildContext context) {
     showFlexibleBottomSheet<void>(
       minHeight: 0,
-      initHeight: 0.8,
+      initHeight: 0.85,
       maxHeight: 1,
       context: context,
       builder: (context, controller, offset) {

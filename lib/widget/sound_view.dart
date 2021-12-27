@@ -87,6 +87,7 @@ class _SoundViewState extends State<SoundView> {
                     ],
                   ),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       IconButton(
                           onPressed: () {
