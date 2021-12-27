@@ -38,6 +38,7 @@ dependencies:
   bottom_sheet: ^1.0.5
   just_audio: ^0.9.18
   flutter_switch: ^0.3.2
+  font_awesome_flutter: ^9.2.0
 
 dev_dependencies:
   flutter_test:

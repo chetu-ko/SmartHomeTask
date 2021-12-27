@@ -1,9 +1,11 @@
+import 'package:bottom_sheet/bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:smarthomestack/main.dart';
 import 'package:smarthomestack/widget/blur_effect.dart';
+import 'package:smarthomestack/widget/bottom_sheet.dart';
 import 'package:smarthomestack/widget/sound_view.dart';
 import 'package:smarthomestack/widget/stat_container.dart';
 
@@ -110,6 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     children: [
                       InkWell(
                         onTap: () {
+                          _showSheetWithoutList(context);
                           setState(() {
                             isfirstSelect
                                 ? isfirstSelect = false
@@ -277,6 +280,22 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
+    );
+  }
+
+  void _showSheetWithoutList(BuildContext context) {
+    showFlexibleBottomSheet<void>(
+      minHeight: 0,
+      initHeight: 0.8,
+      maxHeight: 1,
+      context: context,
+      builder: (context, controller, offset) {
+        return BottomSheetView(
+          scrollController: controller,
+          bottomSheetOffset: offset,
+        );
+      },
+      anchors: [0, 0.5, 1],
     );
   }
 

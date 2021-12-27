@@ -2,8 +2,9 @@
     package="com.example.smarthomestack">
    <application
         android:label="smarthomestack"
-        android:icon="@mipmap/ic_launcher">
-            <application ... android:usesCleartextTraffic="true">
+        android:icon="@mipmap/ic_launcher"
+        android:usesCleartextTraffic="true">
+            
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
