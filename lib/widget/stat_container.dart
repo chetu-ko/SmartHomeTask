@@ -40,7 +40,7 @@ class _StatContainerState extends State<StatContainer> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: EdgeInsets.all(10.0.sp),
               child: Row(
                 children: [
                   Text(
@@ -70,19 +70,19 @@ class _StatContainerState extends State<StatContainer> {
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: EdgeInsets.only(
-                        left: 10,
+                        left: 10.w,
                         bottom: downPad![index].toDouble(),
                         right: 0,
                         top: topPad![index].toDouble()),
                     child: Container(
-                      width: 5,
+                      width: 5.w,
                       height: height![index].toDouble(),
                       decoration: BoxDecoration(
                         color: index.isEven
                             ? AppColor.appwhite
                             : AppColor.appwhite.withOpacity(0.5),
-                        borderRadius: const BorderRadius.all(
-                          Radius.circular(10),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10.r),
                         ),
                       ),
                     ),

@@ -55,11 +55,11 @@ class _SoundViewState extends State<SoundView> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Container(
-                        width: 30,
-                        height: 30,
-                        decoration: const BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(10)),
-                          image: DecorationImage(
+                        width: 30.w,
+                        height: 30.h,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(10.r)),
+                          image: const DecorationImage(
                             image: AssetImage("assets/bg.jpg"),
                             fit: BoxFit.fill,
                           ),
@@ -102,10 +102,10 @@ class _SoundViewState extends State<SoundView> {
                                   : soundlength = 0;
                             });
                           },
-                          icon: const Icon(
+                          icon: Icon(
                             Icons.skip_previous,
                             color: AppColor.appwhite,
-                            size: 20,
+                            size: 20.sp,
                           )),
                       FrostedDemo(
                         height: 20.h,
@@ -127,7 +127,7 @@ class _SoundViewState extends State<SoundView> {
                           icon: Icon(
                             isplaying == false ? Icons.play_arrow : Icons.pause,
                             color: AppColor.appwhite,
-                            size: 20,
+                            size: 20.sp,
                           ),
                         ),
                       ),
@@ -144,10 +144,10 @@ class _SoundViewState extends State<SoundView> {
                                   : soundlength = 1;
                             });
                           },
-                          icon: const Icon(
+                          icon: Icon(
                             Icons.skip_next,
                             color: AppColor.appwhite,
-                            size: 20,
+                            size: 20.sp,
                           ))
                     ],
                   )

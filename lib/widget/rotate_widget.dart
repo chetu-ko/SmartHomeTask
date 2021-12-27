@@ -40,12 +40,12 @@ class _TempControllerState extends State<TempController> {
                   angle: finalAngle.isNegative ? 0 : finalAngle,
                   child: Material(
                     elevation: 10,
-                    borderRadius: BorderRadius.circular(100),
+                    borderRadius: BorderRadius.circular(100.r),
                     child: Container(
                       height: 200.h,
                       width: 200.w,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(100),
+                        borderRadius: BorderRadius.circular(100.r),
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -63,17 +63,17 @@ class _TempControllerState extends State<TempController> {
             },
           ),
           Positioned(
-            top: 25,
-            left: 25,
+            top: 25.h,
+            left: 25.w,
             child: Material(
               elevation: 10,
-              borderRadius: BorderRadius.circular(80),
+              borderRadius: BorderRadius.circular(80.r),
               child: Container(
                 height: 150.h,
                 width: 150.w,
                 decoration: BoxDecoration(
                   color: AppColor.appwhite,
-                  borderRadius: BorderRadius.circular(80),
+                  borderRadius: BorderRadius.circular(80.r),
                 ),
                 child: Center(
                   child: Text(

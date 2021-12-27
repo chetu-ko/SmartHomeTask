@@ -2,8 +2,6 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:smarthomestack/main.dart';
-import 'package:smarthomestack/widget/border_paint.dart';
 
 class FrostedDemo extends StatelessWidget {
   final Widget child;

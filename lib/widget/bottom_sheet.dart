@@ -27,23 +27,23 @@ class _BottomSheetViewState extends State<BottomSheetView> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Material(
-        borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(30),
-          topRight: Radius.circular(20),
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(30.r),
+          topRight: Radius.circular(20.r),
         ),
         child: Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             color: AppColor.appwhite,
             borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(30),
-              topRight: Radius.circular(20),
+              topLeft: Radius.circular(30.r),
+              topRight: Radius.circular(20.r),
             ),
           ),
           child: Padding(
-            padding: const EdgeInsets.only(
-              top: 10,
-              left: 20,
-              right: 20,
+            padding: EdgeInsets.only(
+              top: 10.h,
+              left: 20.w,
+              right: 20.w,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -57,8 +57,8 @@ class _BottomSheetViewState extends State<BottomSheetView> {
                       decoration: BoxDecoration(
                           color: AppColor.subtext.withOpacity(0.2),
                           borderRadius: BorderRadius.circular(40)),
-                      width: 50,
-                      height: 10,
+                      width: 50.w,
+                      height: 10.h,
                     ),
                   ),
                 ),
@@ -76,10 +76,10 @@ class _BottomSheetViewState extends State<BottomSheetView> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
                         Padding(
-                          padding: const EdgeInsets.only(left: 18),
+                          padding: EdgeInsets.only(left: 18.w),
                           child: FlutterSwitch(
                             width: 60.w,
-                            height: 28,
+                            height: 28.h,
                             activeColor: AppColor.button,
                             value: status,
                             onToggle: (val) {
@@ -105,14 +105,16 @@ class _BottomSheetViewState extends State<BottomSheetView> {
                   child: Container(
                     height: 300.h,
                     child: Padding(
-                      padding: EdgeInsets.only(top: 20),
+                      padding: EdgeInsets.only(top: 20.h),
                       child: Row(
                         children: [
                           Wrap(
                             children: [
-                              Text("14",
-                                  style: TextStyle(
-                                      fontSize: 18.sp, color: AppColor.text)),
+                              Text(
+                                "14",
+                                style: TextStyle(
+                                    fontSize: 18.sp, color: AppColor.text),
+                              ),
                               Padding(
                                 padding: const EdgeInsets.only(top: 0),
                                 child: Text("°C",
@@ -121,7 +123,7 @@ class _BottomSheetViewState extends State<BottomSheetView> {
                               )
                             ],
                           ),
-                          TempController(),
+                          const TempController(),
                           Wrap(
                             children: [
                               Text("28",
@@ -167,21 +169,27 @@ class _BottomSheetViewState extends State<BottomSheetView> {
                             color: AppColor.subtext.withOpacity(0.2),
                             borderRadius: BorderRadius.circular(20.r)),
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(8.0.sp),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Text("Fan",
-                                      style: TextStyle(
-                                          fontSize: 20.sp,
-                                          color: AppColor.text)),
-                                  Text("Off",
-                                      style: TextStyle(
-                                          fontSize: 28.sp,
-                                          color: AppColor.text)),
+                                  Text(
+                                    "Fan",
+                                    style: TextStyle(
+                                      fontSize: 20.sp,
+                                      color: AppColor.text,
+                                    ),
+                                  ),
+                                  Text(
+                                    "Off",
+                                    style: TextStyle(
+                                      fontSize: 28.sp,
+                                      color: AppColor.text,
+                                    ),
+                                  ),
                                 ],
                               ),
                               const Spacer(),
@@ -205,21 +213,27 @@ class _BottomSheetViewState extends State<BottomSheetView> {
                             color: AppColor.subtext.withOpacity(0.2),
                             borderRadius: BorderRadius.circular(20.r)),
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(8.0.sp),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Text("Cooler",
-                                      style: TextStyle(
-                                          fontSize: 20.sp,
-                                          color: AppColor.text)),
-                                  Text("Off",
-                                      style: TextStyle(
-                                          fontSize: 28.sp,
-                                          color: AppColor.text)),
+                                  Text(
+                                    "Cooler",
+                                    style: TextStyle(
+                                      fontSize: 20.sp,
+                                      color: AppColor.text,
+                                    ),
+                                  ),
+                                  Text(
+                                    "Off",
+                                    style: TextStyle(
+                                      fontSize: 28.sp,
+                                      color: AppColor.text,
+                                    ),
+                                  ),
                                 ],
                               ),
                               const Spacer(),
@@ -247,7 +261,7 @@ class _BottomSheetViewState extends State<BottomSheetView> {
 Widget commonConatiner(double width, String title, String value, Color color) {
   return Container(
     width: width,
-    height: 95,
+    height: 95.h,
     decoration: BoxDecoration(
         color: AppColor.subtext.withOpacity(0.2),
         borderRadius: BorderRadius.circular(20.r)),
@@ -258,13 +272,20 @@ Widget commonConatiner(double width, String title, String value, Color color) {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Text(title,
-                style: TextStyle(color: AppColor.text, fontSize: 16.sp)),
+            Text(
+              title,
+              style: TextStyle(
+                color: AppColor.text,
+                fontSize: 16.sp,
+              ),
+            ),
             Container(
-              width: 5,
-              height: 5,
+              width: 5.w,
+              height: 5.h,
               decoration: BoxDecoration(
-                  color: color, borderRadius: BorderRadius.circular(10)),
+                color: color,
+                borderRadius: BorderRadius.circular(10.r),
+              ),
             ),
           ],
         ),
@@ -274,13 +295,16 @@ Widget commonConatiner(double width, String title, String value, Color color) {
             alignment: WrapAlignment.start,
             crossAxisAlignment: WrapCrossAlignment.start,
             children: [
-              Text(value,
-                  style: TextStyle(
-                      color: AppColor.text,
-                      fontSize: 30.sp,
-                      fontWeight: FontWeight.normal)),
+              Text(
+                value,
+                style: TextStyle(
+                  color: AppColor.text,
+                  fontSize: 30.sp,
+                  fontWeight: FontWeight.normal,
+                ),
+              ),
               Padding(
-                padding: const EdgeInsets.only(top: 9),
+                padding: EdgeInsets.only(top: 9.h),
                 child: Text(
                   "°C",
                   style: TextStyle(fontSize: 20.sp, color: AppColor.text),
@@ -301,13 +325,14 @@ Widget tempShow() {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.only(left: 10, top: 10),
+            padding: EdgeInsets.only(left: 10.w, top: 10.w),
             child: Text(
               "Current tempreture",
               style: TextStyle(
-                  color: AppColor.subtext,
-                  fontSize: 18.sp,
-                  fontWeight: FontWeight.normal),
+                color: AppColor.subtext,
+                fontSize: 18.sp,
+                fontWeight: FontWeight.normal,
+              ),
             ),
           ),
           SizedBox(
@@ -317,20 +342,23 @@ Widget tempShow() {
             alignment: WrapAlignment.start,
             crossAxisAlignment: WrapCrossAlignment.start,
             children: [
-              const Padding(
-                padding: EdgeInsets.only(top: 4),
-                child: Icon(
+              Padding(
+                padding: EdgeInsets.only(top: 4.h),
+                child: const Icon(
                   Icons.arrow_drop_up,
                   color: AppColor.subtext,
                 ),
               ),
-              Text("24",
-                  style: TextStyle(
-                      color: AppColor.text,
-                      fontSize: 30.sp,
-                      fontWeight: FontWeight.normal)),
+              Text(
+                "24",
+                style: TextStyle(
+                  color: AppColor.text,
+                  fontSize: 30.sp,
+                  fontWeight: FontWeight.normal,
+                ),
+              ),
               Padding(
-                padding: const EdgeInsets.only(top: 9),
+                padding: EdgeInsets.only(top: 9.h),
                 child: Text(
                   "°C",
                   style: TextStyle(fontSize: 20.sp, color: AppColor.text),
@@ -356,20 +384,23 @@ Widget tempShow() {
           ),
           Wrap(
             children: [
-              const Padding(
-                padding: EdgeInsets.only(top: 4, left: 40),
-                child: Icon(
+              Padding(
+                padding: EdgeInsets.only(top: 4.h, left: 40.w),
+                child: const Icon(
                   Icons.arrow_drop_down,
                   color: AppColor.subtext,
                 ),
               ),
-              Text("54",
-                  style: TextStyle(
-                      color: AppColor.text,
-                      fontSize: 30.sp,
-                      fontWeight: FontWeight.normal)),
+              Text(
+                "54",
+                style: TextStyle(
+                  color: AppColor.text,
+                  fontSize: 30.sp,
+                  fontWeight: FontWeight.normal,
+                ),
+              ),
               Padding(
-                padding: const EdgeInsets.only(top: 9),
+                padding: EdgeInsets.only(top: 9.h),
                 child: Text(
                   "%",
                   style: TextStyle(fontSize: 20.sp, color: AppColor.text),

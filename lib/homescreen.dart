@@ -228,7 +228,7 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 20.h,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20),
+              padding: EdgeInsets.only(left: 20.w),
               child: Wrap(
                   runAlignment: WrapAlignment.end,
                   alignment: WrapAlignment.end,
@@ -242,7 +242,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               : AppColor.appwhite),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 9),
+                      padding: EdgeInsets.only(top: 9.h),
                       child: Text(
                         "°C",
                         style: TextStyle(
@@ -261,10 +261,10 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Padding(
-                  padding: const EdgeInsets.only(left: 18),
+                  padding: EdgeInsets.only(left: 18.w),
                   child: FlutterSwitch(
                     width: 60.w,
-                    height: 28,
+                    height: 28.h,
                     activeColor: AppColor.button,
                     value: status1,
                     onToggle: (val) {
@@ -285,8 +285,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _showSheetWithoutList(BuildContext context) {
     showFlexibleBottomSheet<void>(
-      minHeight: 0,
-      initHeight: 0.85,
+      minHeight: 0.h,
+      initHeight: 0.85.h,
       maxHeight: 1,
       context: context,
       builder: (context, controller, offset) {
@@ -312,7 +312,7 @@ class _MyHomePageState extends State<MyHomePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.only(left: 20, top: 20),
+              padding: EdgeInsets.only(left: 20.w, top: 20.h),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -326,7 +326,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Icon(
                     Icons.arrow_forward_ios_rounded,
                     color: issecondSelect ? AppColor.text : AppColor.appwhite,
-                    size: 16,
+                    size: 16.sp,
                   )
                 ],
               ),
@@ -335,15 +335,17 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 20.h,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20, top: 10),
-              child: Text("• Macbook pro",
-                  style: TextStyle(
-                    color: issecondSelect ? AppColor.text : AppColor.appwhite,
-                    fontSize: 15.sp,
-                  )),
+              padding: EdgeInsets.only(left: 20.w, top: 10.h),
+              child: Text(
+                "• Macbook pro",
+                style: TextStyle(
+                  color: issecondSelect ? AppColor.text : AppColor.appwhite,
+                  fontSize: 15.sp,
+                ),
+              ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20, top: 8),
+              padding: EdgeInsets.only(left: 20.w, top: 8.h),
               child: Text("• HomePod",
                   style: TextStyle(
                     color: issecondSelect ? AppColor.text : AppColor.appwhite,
@@ -351,7 +353,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   )),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20, top: 8),
+              padding: EdgeInsets.only(left: 20.w, top: 8.h),
               child: Text("• PlayStation 5",
                   style: TextStyle(
                     color: issecondSelect ? AppColor.text : AppColor.appwhite,
@@ -365,10 +367,10 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Padding(
-                  padding: const EdgeInsets.only(left: 20),
+                  padding: EdgeInsets.only(left: 20.w),
                   child: FlutterSwitch(
                     width: 60.w,
-                    height: 28,
+                    height: 28.h,
                     activeColor: AppColor.button,
                     value: status2,
                     onToggle: (val) {
@@ -398,7 +400,7 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: EdgeInsets.all(8.0.sp),
                   child: Text(
                     "Smart TV",
                     style: TextStyle(
@@ -408,9 +410,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 const Spacer(),
-                const Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Icon(
+                Padding(
+                  padding: EdgeInsets.all(8.0.sp),
+                  child: const Icon(
                     Icons.arrow_forward_ios_rounded,
                     color: AppColor.appwhite,
                     size: 16,
@@ -419,7 +421,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 8),
+              padding: EdgeInsets.only(left: 8.w),
               child: Text(
                 "Samsung UA55 4AC",
                 style: TextStyle(
@@ -433,10 +435,10 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 Padding(
-                  padding: const EdgeInsets.only(left: 20, bottom: 10),
+                  padding: EdgeInsets.only(left: 20.w, bottom: 10.h),
                   child: FlutterSwitch(
                     width: 60.w,
-                    height: 28,
+                    height: 28.h,
                     activeColor: AppColor.button,
                     value: status3,
                     onToggle: (val) {
