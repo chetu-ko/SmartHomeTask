@@ -285,8 +285,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _showSheetWithoutList(BuildContext context) {
     showFlexibleBottomSheet<void>(
-      minHeight: 0.h,
-      initHeight: 0.85.h,
+      minHeight: 0,
+      initHeight: 0.85,
       maxHeight: 1,
       context: context,
       builder: (context, controller, offset) {
